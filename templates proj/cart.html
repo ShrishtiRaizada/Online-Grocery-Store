@@ -111,7 +111,7 @@
                                     <div class="py-2 text-uppercase">Price</div>
                                 </th>
                                 <th scope="col" class="border-0 bg-light">
-                                    <div class="py-2 text-uppercase">Quantity(Kg)</div>
+                                    <div class="py-2 text-uppercase">Quantity</div>
                                 </th>
                                 <th scope="col" class="border-0 bg-light">
                                     <div class="py-2 text-uppercase">Price per Product</div>
@@ -130,9 +130,9 @@
                                         </div>
                                     </div>
                                 </th>
-                                <td class="border-0 align-middle" ><strong>&#8377 {{product.price}}/kg</strong></td>
+                                <td class="border-0 align-middle" ><strong>&#8377 {{product.price}}</strong></td>
                                 <td class="border-0 align-middle" align="center">
-                                    <strong>{{product|count:request.session.cart}} kg</strong></td>
+                                    <strong>{{product|count:request.session.cart}}</strong></td>
                                 <td
                                         class="border-0 align-middle"><strong>&#8377
                                     {{product|price_total:request.session.cart}}</strong></td>
@@ -173,16 +173,16 @@
                         </form>
                         {% if codes is not None %}
                         {% if offers|coupon:codes %}
-                        <p style="color: green;"><b>coupon code applied successfully!!!</b></p>
+                        <p style="color: green;"><b>coupon code applied successfully</b></p>
                         {% else %}
-                        <p style="color: red;"><b>coupon code is not valid!!!</b></p>
+                        <p style="color: red;"><b>coupon code is not valid</b></p>
                         {% endif %}
                         {% endif %}
 
                     </div>
-                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Feedback</div>
                     <div class="p-4">
-                        <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
+                        <p class="font-italic mb-4">If you have some feedback you can leave them in the box below</p>
                         <textarea name="" cols="30" rows="2" class="form-control"></textarea>
                     </div>
                 </div>

@@ -147,7 +147,7 @@
       top: 0;
       height: 70px;
       width: 100%;
-      background: #F3EBF6;;
+      background: #F3EBF6;
     }
 
     /*
@@ -231,6 +231,8 @@
                     <span class="badge bg-light text-dark">
                         {{request.session.cart.keys|length}}</span>
                 </a></li>
+                <li><a href="/logout">Log out</a></li>
+                <li><a href="/about-us">About</a></li>
                 <li><a href="#">All</a>
                     <ul class="nav-dropdown" style="">
                         <li><a href="/products?categorie=10">All</a></li>
@@ -239,9 +241,9 @@
                         {% endfor %}
                     </ul>
                 </li>
-                <li><a href="/logout">Log out</a></li>
+
                 {% endif %}
-                <li><a href="/about-us">About</a></li>
+
             </ul>
         </nav>
     </div>
@@ -252,15 +254,15 @@
     {% for product in products %}
     <div class="col" style="padding: 20px" >
         <div class="card"
-             style="width: 18rem; border-radius: 1.5rem; box-shadow: 2px 10px 20px grey;
-                     font-size: 20p; font-family: Comic Sans MS; margin-top: 60px; outline: none; border: none"
+             style="width: 16.5rem; border-radius: 1.5rem; box-shadow: 2px 10px 20px grey;
+                     font-size: 20p; font-family: Comic Sans MS; margin-top: 60px; margin-right: 30px; outline: none; border: none"
             id={{product.id}}>
             <img src="{{ product.image_url.url }}" class="card-img-top" alt="..."
                  style="width: 18 rem;height: 14rem;border-radius: 1.5rem">
 
             <div class="card-body" >
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">&#8377 {{ product.price }}/kg</p>
+                <p class="card-text">&#8377 {{ product.price }}</p>
 
 
             </div>
